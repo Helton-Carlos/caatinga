@@ -7,21 +7,19 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
-      <Input
-        placeholder='Pesquisar'
-        value={textValue}
-        onChangeText={(text) => setTextValue(text)}
-      />
+      <View>
+        <Input
+          placeholder='Pesquisar'
+          value={textValue}
+          onChangeText={(text) => setTextValue(text)}
+        />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#f3f5f8',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: '90%',
   },
 });

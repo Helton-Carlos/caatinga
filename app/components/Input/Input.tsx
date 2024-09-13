@@ -11,10 +11,11 @@ export default function Input({ ...rest }: TextInputProps) {
 
 const styles = StyleSheet.create({
   input: {
+    width: '100%',
     backgroundColor: 'transparent',
-    paddingTop: 14,
-    paddingBottom: 14,
+    padding: 14,
     borderWidth: 1,
-    margin: 1
+    borderRadius: 15,
+    margin: 20,
   },
 });
