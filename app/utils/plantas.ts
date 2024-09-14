@@ -1,5 +1,6 @@
-export function plantas() {
-  const planta = [
+import { IPlantProps } from '../types/types.type'
+
+export const plantas: IPlantProps[] = [
     {
       id: 1,
       name: 'cacto',
@@ -56,7 +57,4 @@ export function plantas() {
       prince: '37,00',
       image: 'quipá.png'
     },
-  ];
-
-  return planta;
-}
+];

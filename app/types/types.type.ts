@@ -5,4 +5,4 @@ export interface IPlantProps {
   description: string,
   prince: number | string,
   image: string
-}
+} 
