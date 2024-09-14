@@ -1,5 +1,5 @@
 export interface IPlantProps {
-  id: string,
+  id: number | string ,
   name: string,
   type: string,
   description: string,
