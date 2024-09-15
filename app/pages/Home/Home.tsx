@@ -31,6 +31,7 @@ export default function Home() {
           numColumns={2}
           columnWrapperStyle={{ justifyContent: 'space-between' }}
           contentContainerStyle={{ paddingBottom: 14 }}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>
