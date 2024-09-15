@@ -5,7 +5,7 @@ export const plantas: IPlantProps[] = [
       id: 1,
       name: 'cacto',
       type: 'cacto',
-      description: 'As características que chamam mais atenção nos cactos são o seu corpo suculento e os espinhos. Os cactos são suculentos porque mantêm bastante água dentro das células do seu corpo.',
+      description: 'As características que chamam mais atenção nos cactos são o seu corpo suculento e os espinhos.',
       prince: '55,00',
       image: 'cacto.png'
     },
