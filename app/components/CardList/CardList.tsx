@@ -1,5 +1,8 @@
 import { StyleSheet, Text, Image, DimensionValue, Pressable } from 'react-native';
 import { IPlantProps } from '../../types/types.type';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { StackParamList } from '../../routes/routes';
 
 interface ICardListProps {
   data: IPlantProps,
@@ -7,9 +10,22 @@ interface ICardListProps {
 }
 
 export default function CardList({ data, widthScreen }: ICardListProps) {
+  const navigation = useNavigation<NativeStackNavigationProp<StackParamList>>();
+
+  function handleNavigate() {
+    navigation.navigate("products", { id: data.id })
+  }
+
   return (
-    <Pressable style={[styles.plantContainer, { width: widthScreen }]}>
-      <Image source={require('../../assets/plantas/cacto.png')} style={styles.plantImage} />
+    <Pressable
+      style={[styles.plantContainer, { width: widthScreen }]}
+      onPress={handleNavigate}
+    >
+      <Image
+        source={require('../../assets/plantas/cacto.png')}
+        style={styles.plantImage}
+        resizeMode='cover'
+      />
       <Text style={styles.plantName}>{data.name}</Text>
       <Text style={styles.plantDescription}>{data.description}</Text>
       <Text style={styles.plantPrice}>R$ {data.prince}</Text>
